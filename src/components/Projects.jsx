@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react'; // optional, can use emoji or your own icons
 import advance from '../assets/qr-code.jpg';
 import basic1 from '../assets/plp.jpg';
-
+import note from '../assets/note.jpg'
 import intm from '../assets/weather-forecast.jpg';
 
 
@@ -26,7 +26,12 @@ const projectData = [
     img: advance,
     link: 'https://qr-code-attendace-app.netlify.app/',
   },
- 
+  {
+    title: 'NoteLock',
+    desc: 'This is a app which is used to save notes and passwords proxy .',
+    img: note,
+    link: 'https://notelock-password.netlify.app/',
+  },
  
 ];
 
