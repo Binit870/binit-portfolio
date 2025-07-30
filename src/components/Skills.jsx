@@ -1,14 +1,24 @@
 import React from 'react';
 
-const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js', 'Express', 'MongoDB', 'TailwindCSS', 'Github','C++'];
+const skills = [
+  'HTML', 'CSS', 'JavaScript', 'React',
+  'Node.js', 'Express', 'MongoDB',
+  'TailwindCSS', 'Github', 'C++'
+];
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 text-center">
-      <h2 className="text-3xl font-bold text-blue-600 mb-10">Skills</h2>
+    <section id="skills" className="py-20 text-center bg-white dark:bg-gray-900 transition-colors duration-300">
+      <h2 className="text-3xl font-bold text-blue-600 dark:text-cyan-400 mb-10">Skills</h2>
+
       <div className="grid grid-cols-3 md:grid-cols-5 gap-4 px-6">
         {skills.map((skill, index) => (
-          <div key={index} className="bg-gray-100 dark:bg-gray-800 p-4 rounded shadow hover:shadow-lg transition">{skill}</div>
+          <div
+            key={index}
+            className="bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-100 p-4 rounded shadow hover:shadow-lg hover:scale-105 transition-transform duration-300 font-medium"
+          >
+            {skill}
+          </div>
         ))}
       </div>
     </section>
