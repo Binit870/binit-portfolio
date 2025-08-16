@@ -8,53 +8,63 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="py-6 px-6 bg-gray-200 dark:bg-gray-900 text-sm text-gray-800 dark:text-gray-300">
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-        <div className="mb-4 md:mb-0 font-bold text-center md:text-left">
-          © {new Date().getFullYear()} Binit Patra | Made with React & Tailwind CSS
+    <footer className="py-6 px-4 sm:px-6 bg-gray-200 dark:bg-gray-900 text-sm text-gray-800 dark:text-gray-300 border-t border-gray-300 dark:border-gray-700">
+      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+        
+        {/* Copyright Text */}
+        <div className="font-semibold text-center md:text-left text-xs sm:text-sm">
+          © {new Date().getFullYear()} Binit Patra | All Rights Reserved
         </div>
-        <div className="flex space-x-5">
+
+        {/* Social Media Icons */}
+        <div className="flex items-center space-x-5">
+          {/* NOTE: Remember to replace placeholder URLs for Facebook and Instagram */}
           <a
             href="https://www.linkedin.com/in/binit-patra-762040276"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-blue-600 dark:hover:text-blue-400 transition"
+            aria-label="LinkedIn Profile"
+            className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 transform hover:-translate-y-1"
           >
-            <Linkedin size={30} />
+            <Linkedin size={24} />
           </a>
           <a
-            href="https://www.facebook.com/your-profile"
+            href="https://www.facebook.com/your-profile" 
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-blue-700 dark:hover:text-blue-500 transition"
+            aria-label="Facebook Profile"
+            className="text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-500 transition-all duration-300 transform hover:-translate-y-1"
           >
-            <Facebook size={30} />
+            <Facebook size={24} />
           </a>
           <a
             href="https://www.instagram.com/your-profile"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-pink-500 dark:hover:text-pink-400 transition"
+            aria-label="Instagram Profile"
+            className="text-gray-600 dark:text-gray-400 hover:text-pink-500 dark:hover:text-pink-400 transition-all duration-300 transform hover:-translate-y-1"
           >
-            <Instagram size={30} />
+            <Instagram size={24} />
           </a>
           <a
             href="https://github.com/Binit870"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-gray-900 dark:hover:text-white transition"
+            aria-label="GitHub Profile"
+            className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-all duration-300 transform hover:-translate-y-1"
           >
-            <Github size={30} />
+            <Github size={24} />
           </a>
           <a
             href="https://technologiawithai.blogspot.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-orange-500 dark:hover:text-orange-400 transition"
+            aria-label="Blogger Profile"
+            className="text-gray-600 dark:text-gray-400 hover:text-orange-500 dark:hover:text-orange-400 transition-all duration-300 transform hover:-translate-y-1"
           >
             <svg
-              width="30"
-              height="30"
+              width="24"
+              height="24"
               viewBox="0 0 512 512"
               fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"

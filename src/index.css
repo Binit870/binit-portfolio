@@ -1,39 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import '@fortawesome/fontawesome-free/css/all.min.css';
-/* src/index.css or App.css */
 
-::-webkit-scrollbar {
-  height: 8px;
-}
+/* src/index.css */
 
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: rgba(59, 130, 246, 0.5); /* Tailwind blue-500 @ 50% */
-  border-radius: 4px;
-}
-/* Hide horizontal scrollbar but keep scrolling */
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
-.scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
-}
-/* Hide full page scrollbar (but keep scroll working) */
-body::-webkit-scrollbar {
+/* Hides the scrollbar for Webkit-based browsers (Chrome, Safari, Edge) */
+.hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
 
-body {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
+/* Hides the scrollbar for Firefox */
+.hide-scrollbar {
+  scrollbar-width: none;
 }
-html, body {
-  height: 100%;
-  overflow-y: scroll;
+
+/* Hides the scrollbar for Internet Explorer and old Edge */
+.hide-scrollbar {
+  -ms-overflow-style: none;
 }
