@@ -3,7 +3,7 @@
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
-import Skills from "./components/Skills";
+import Accomplishments from "./components/Accomplishments";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -18,7 +18,7 @@ function App() {
         {/* All components are rendered here directly */}
         <Home />
         <About />
-        <Skills />
+        <Accomplishments/>
         <Projects />
         <Contact />
       </main>
