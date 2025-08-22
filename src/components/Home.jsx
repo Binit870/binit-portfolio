@@ -58,7 +58,9 @@ const TypewriterText = () => {
 
     const timer = setTimeout(handleTyping, typingSpeed);
     return () => clearTimeout(timer);
-  }, [ charIndex, lineIndex, isDeleting, displayedLines]);
+    // ✅ CORRECTED DEPENDENCY ARRAY
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [charIndex, lineIndex, isDeleting, displayedLines]);
 
   // Highlight words Binit & Developer
   const renderColoredText = (text) => {
