@@ -4,17 +4,22 @@ import { FaExternalLinkAlt } from 'react-icons/fa'; // Icon for links
 
 // --- Updated Data Structure ---
 const achievements = [
-  { title: 'Hackathon Winner - Google Code Jam' },
-  { title: 'Top 1% Rank - HackTheBox' },
-  { title: 'Dean\'s List Scholar - University' },
-  { title: 'Best Project Award - CS Dept.' }
+  { title: 'Volunteer - Aarambh 2K23' },
+  { title: 'Volunteer - Technika 2K24' },
+  { title: 'Top 30 - HackHorizon 2K25' },
+  { title: 'Rank -13 GeeksforGeeks - University' },
+  { title: 'HackerRank - 3 Star in CPP' },
+  // { title: 'Best Project Award - CS Dept.' }
 ];
 
 const certificates = [
-  { title: 'AWS Certified Cloud Practitioner', link: '#' },
-  { title: 'Responsive Web Design - freeCodeCamp', link: '#' },
-  { title: 'JavaScript Algorithms & Data Structures', link: '#' },
-  { title: 'The Complete 2024 Web Development Bootcamp', link: '#' }
+  // { title: 'Google Cloud Study Jams - GDSC', link: '#' },
+  { title: 'API Bootcamp - GeeksforGeeks', link: 'https://media.geeksforgeeks.org/courses/certificates/98f6eb9b2c6dbbf0b240158e5c051397.pdf' },
+  { title: 'Responsive Web Design - freeCodeCamp', link: 'https://www.freecodecamp.org/certification/Binit870/responsive-web-design' },
+  { title: 'Full Stack Developer Bootcamp - GeeksforGeeks', link: 'https://media.geeksforgeeks.org/courses/certificates/3da899c272b31dc63847c2f08fff5fac.pdf' },
+  { title: 'CSS(Basic) - HackerRank', link: 'https://www.hackerrank.com/certificates/iframe/fe5bd579ce21' },
+  // { title: '5-Days Workshop On Mastering Web Applications And Version Control Systems - Microsoft Learn Student Ambassador', link: '#' },
+  { title: 'Introduction to Cloud Computing - IBM', link: 'https://coursera.org/verify/GUQT8VFK302F' },
 ];
 
 // Animation variants for container
@@ -40,8 +45,8 @@ const itemVariants = {
 
 const Accomplishments = () => {
   return (
-    <section 
-      id="accomplishments" 
+    <section
+      id="accomplishments"
       // CHANGED: Adjusted vertical padding for responsiveness
       className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 text-center bg-gray-800 text-white"
     >
@@ -62,7 +67,7 @@ const Accomplishments = () => {
           <h3 className="text-2xl font-semibold text-white mb-8">
             Awards & Achievements
           </h3>
-          <motion.div 
+          <motion.div
             // CHANGED: Smoother grid transition for tablets
             className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6"
             variants={containerVariants}
@@ -89,7 +94,7 @@ const Accomplishments = () => {
           <h3 className="text-2xl font-semibold text-white mb-8">
             Certificates
           </h3>
-          <motion.div 
+          <motion.div
             // CHANGED: Smoother grid transition for tablets
             className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6"
             variants={containerVariants}
@@ -116,7 +121,6 @@ const Accomplishments = () => {
             ))}
           </motion.div>
         </div>
-
       </div>
     </section>
   );
