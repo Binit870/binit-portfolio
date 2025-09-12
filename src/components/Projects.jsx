@@ -8,18 +8,36 @@ import weatherAppImage from '../assets/weather-forecast.jpg';
 import qrAttendanceImage from '../assets/qr-code.jpg';
 import noteLockImage from '../assets/note.jpg';
 import collabEdtechImage from '../assets/collab.jpg';
+import healthCureImage from '../assets/healthcure.jpg';
 
 // Updated project data with a 'status' field
 const projectData = [
   {
-    title: 'Product Landing Page',
-    desc: 'A product landing page for a dairy farm, showcasing various milk products and their details.',
-    img: dairyFarmImage,
-    link: 'https://milan-dairy-farm.netlify.app/',
-    tech: ['HTML', 'CSS', 'JavaScript'],
+    
+   title: 'HealthCure',
+    desc: 'A Smart Healthcare assitance website with multiple features.',
+    img: healthCureImage,
+    link: 'https://healthxcure.netlify.app/',
+    tech: ['React', 'MongoDB', 'Express.js', 'Tailwind CSS'],
+    status: 'In Progress',
+  },
+   {
+    title: 'NoteLock',
+    desc: 'A secure application for saving personal notes and passwords with encryption.',
+    img: noteLockImage,
+    link: 'https://notelock-password.netlify.app/',
+    tech: ['React', 'MongoDB', 'Express.js', 'Tailwind CSS'],
     status: 'Complete',
   },
   {
+    title: 'QR-Code Attendance App',
+    desc: 'A QR code-based attendance system designed to prevent proxy attendance.',
+    img: qrAttendanceImage,
+    link: 'https://qr-code-attendace-app.netlify.app/',
+    tech: ['React', 'Tailwind CSS', 'QR Scanner'],
+    status: 'Complete',
+  },
+   {
     title: 'Weather Forecast App',
     desc: 'A 5-day weather forecast application that provides real-time weather data for any city.',
     img: weatherAppImage,
@@ -28,21 +46,23 @@ const projectData = [
     status: 'Complete',
   },
   {
-    title: 'QR-Code Attendance App',
-    desc: 'A QR code-based attendance system designed to prevent proxy attendance in classrooms.',
-    img: qrAttendanceImage,
-    link: 'https://qr-code-attendace-app.netlify.app/',
-    tech: ['React', 'Tailwind CSS', 'QR Scanner'],
+    title: 'Product Landing Page',
+    desc: 'A product landing page for a dairy farm, showcasing various milk products and their details.',
+    img: dairyFarmImage,
+    link: 'https://milan-dairy-farm.netlify.app/',
+    tech: ['HTML', 'CSS', 'JavaScript'],
     status: 'Complete',
   },
-  {
-    title: 'NoteLock',
-    desc: 'A secure application for saving personal notes and passwords with encryption.',
-    img: noteLockImage,
-    link: 'https://notelock-password.netlify.app/',
-    tech: ['React', 'MongoDB', 'Express.js', 'Tailwind CSS'],
-    status: 'Complete',
-  },
+//  {
+//     title: 'Course Hub',
+//     desc: 'A collaborative platform connecting learners and mentors to work on real-world projects together.',
+//     img: ,
+//     link: '',
+//     tech: ['React', 'MongoDB', 'Express.js', 'Tailwind CSS'],
+//     status: 'In Progress',
+//   },
+  
+ 
   {
     title: 'Collab Edtech',
     desc: 'A collaborative platform connecting learners and mentors to work on real-world projects together.',

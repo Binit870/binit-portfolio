@@ -100,7 +100,7 @@ return (
             </motion.p>
             
             <motion.p variants={itemVariants} className="text-base md:text-lg leading-relaxed text-gray-300 mb-8">
-              Currently, I'm deepening my expertise in Data Structures and Algorithms, contributing to open-source, and developing exciting projects like a Food Reciepe Finder and a CourseMonitorHub.
+              Currently, I'm deepening my expertise in Data Structures and Algorithms, contributing to open-source, and developing exciting projects like a HealthCure and Course Hub.
             </motion.p>
             
             <motion.div variants={itemVariants}>

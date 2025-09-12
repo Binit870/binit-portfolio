@@ -7,7 +7,7 @@ const achievements = [
   { title: 'Volunteer - Aarambh 2K23' },
   { title: 'Volunteer - Technika 2K24' },
   { title: 'Top 30 - HackHorizon 2K25' },
-  { title: 'Rank -13 GeeksforGeeks - University' },
+  { title: 'Rank -10 GeeksforGeeks - Arka Jain University' },
   { title: 'HackerRank - 3 Star in CPP' },
 ];
 
@@ -19,6 +19,7 @@ const certificates = [
   { title: 'CSS(Basic) - HackerRank', link: 'https://www.hackerrank.com/certificates/iframe/fe5bd579ce21', platform: 'hackerrank' },
   { title: 'Introduction to Cloud Computing - IBM', link: 'https://coursera.org/verify/GUQT8VFK302F', platform: 'ibm' },
   { title: 'Natural Language Processing - Coursera', link: 'https://coursera.org/verify/GUQT8VFK302F', platform: 'default' },
+  { title: 'Code Clash - Lets Code Community', link: 'https://unstop.com/certificate-preview/3f07e581-7571-4dde-b551-9ba961ac151a', platform: 'unstop' },
 ];
 
 // --- NEW: Platform-specific color styles ---
@@ -27,6 +28,7 @@ const platformStyles = {
   fcc: 'bg-blue-900/40 hover:shadow-blue-500/30',
   hackerrank: 'bg-teal-900/40 hover:shadow-teal-500/30',
   ibm: 'bg-indigo-900/40 hover:shadow-indigo-500/30',
+  unstop: 'bg-blue-800/40 hover:shadow-purple-500/30',
   default: 'bg-gray-900 hover:shadow-cyan-500/20', // Fallback color
 };
 
