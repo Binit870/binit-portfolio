@@ -20,14 +20,17 @@ const certificates = [
   { title: 'Introduction to Cloud Computing - IBM', link: 'https://coursera.org/verify/GUQT8VFK302F', platform: 'ibm' },
   { title: 'Natural Language Processing - Coursera', link: 'https://coursera.org/verify/GUQT8VFK302F', platform: 'default' },
   { title: 'Code Clash - Lets Code Community', link: 'https://unstop.com/certificate-preview/3f07e581-7571-4dde-b551-9ba961ac151a', platform: 'unstop' },
+  { title: 'Bharatiya Antariksh Hackathon 2025 - ISRO', link: 'https://certificate.hack2skill.com/user/isrobah25/2025H2S06BAH25-P02565', platform: 'hack2skill' },
+
 ];
 
 // --- NEW: Platform-specific color styles ---
 const platformStyles = {
   gfg: 'bg-green-900/40 hover:shadow-green-500/30',
-  fcc: 'bg-blue-900/40 hover:shadow-blue-500/30',
+  fcc: 'bg-yellow-900/40 hover:shadow-yellow-500/30',
   hackerrank: 'bg-teal-900/40 hover:shadow-teal-500/30',
   ibm: 'bg-indigo-900/40 hover:shadow-indigo-500/30',
+  hack2skill: 'bg-orange-900/40 hover:shadow-orange-500/30',
   unstop: 'bg-blue-800/40 hover:shadow-purple-500/30',
   default: 'bg-gray-900 hover:shadow-cyan-500/20', // Fallback color
 };

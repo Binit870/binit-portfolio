@@ -5,7 +5,7 @@ import { FaDownload } from 'react-icons/fa'; // Import an icon for the button
 // You can replace this with the actual path to your professional photo
 import profilePic from '../assets/binit.jpg'; 
 // Make sure to place your resume in the public folder or import it
-import resumePDF from '../assets/Binit_patra_cv.pdf'; // Example: import resume
+import resumePDF from '../assets/Binit Patra Resume.pdf'; // Example: import resume
 
 const About = () => {
   // --- Data Separated for Clarity ---

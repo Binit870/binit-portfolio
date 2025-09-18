@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 // The TypewriterText component remains the same, so it's omitted for brevity...
 const TypewriterText = () => {
-  const lines = ["Hi, I'm Binit 👋", "Full Stack Developer"];
+  const lines = ["Hi, I'm Binit", "Full Stack Developer"];
   const [displayedLines, setDisplayedLines] = React.useState(["", ""]);
   const [lineIndex, setLineIndex] = React.useState(0);
   const [charIndex, setCharIndex] = React.useState(0);
