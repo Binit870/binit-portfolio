@@ -1,135 +1,114 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { FaDownload } from 'react-icons/fa'; // Import an icon for the button
-
-// You can replace this with the actual path to your professional photo
-import profilePic from '../assets/binit.jpg'; 
-// Make sure to place your resume in the public folder or import it
-import resumePDF from '../assets/Binit Patra Resume.pdf'; // Example: import resume
+import React from "react";
+import { FileText } from "lucide-react";
+import resumePDF from "../assets/Binit-Patra-CV.pdf"; // ✅ Imported from assets
 
 const About = () => {
-  // --- Data Separated for Clarity ---
   const techStack = [
-    'JavaScript', 'React.js', 'Node.js', 'Express', 'MongoDB', 'HTML5', 'CSS', 'Tailwind CSS','Git'
+    "HTML5",
+    "CSS",
+    "JavaScript",
+    "React.js",
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "Tailwind CSS",
+    "Git",
   ];
 
   const tools = [
-    'GitHub', 'VS Code', 'Postman', 'Netlify','MongoDB Compass','Render'
+    "GitHub",
+    "VS Code",
+    "Postman",
+    "Netlify",
+    "MongoDB Compass",
+    "Render",
   ];
 
-  // Animation variants for staggering children
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
+  return (
+    <section id="about" className="py-20 lg:py-32 bg-gray-900 text-white">
+      <div className="container mx-auto px-4 lg:px-8">
+        <div className="max-w-5xl mx-auto">
+          {/* Title */}
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4">
+            Know About <span className="text-cyan-400">Me</span>
+          </h2>
+          <p className="text-xl text-center text-gray-400 mb-12">
+            Student & Aspiring MERN Stack Developer
+          </p>
 
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-      },
-    },
-  };
+          {/* Card */}
+          <div className="bg-gray-800/40 border border-gray-700 rounded-2xl p-8 lg:p-12 space-y-8 shadow-lg">
+            {/* Intro Text */}
+            <div>
+              <p className="text-lg leading-relaxed mb-4">
+                I'm a{" "}
+                <span className="text-cyan-400 font-semibold">
+                  B.Tech Final Year student
+                </span>{" "}
+                in Computer Science and Engineering at Arka Jain University with
+                a deep passion for full-stack web development and AI/ML. I
+                thrive on building platforms that solve real-world problems and
+                creating impactful tech solutions.
+              </p>
+              <p className="text-lg leading-relaxed">
+                Currently, I'm deepening my expertise in Data Structures and
+                Algorithms, contributing to open-source, and developing exciting
+                projects like{" "}
+                <span className="text-cyan-400">HealthXCure</span> and{" "}
+                <span className="text-cyan-400">DevHub</span>.
+              </p>
+            </div>
 
-return (
-    // CHANGED: Adjusted padding for smaller screens
-    <section id="about" className="py-24 px-4 sm:px-6 lg:px-12 bg-gray-900 min-h-screen flex items-center">
-      <div className="container mx-auto max-w-6xl">
-        {/* CHANGED: Smoother font scaling for the main title */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-cyan-400 mb-12">
-          Know About Me
-        </h2>
-        {/* Flex container for the two-column layout */}
-        {/* CHANGED: Adjusted gap for better spacing on mobile */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-16 lg:gap-24">
-          
-          {/* Left Column: Image and Resume Button */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="w-full md:w-1/3 flex-shrink-0 flex flex-col items-center gap-8"
-          >
-            <img 
-              src={profilePic}
-              alt="A professional headshot of Binit" 
-              // CHANGED: Image size is now more optimized for small screens
-              className="rounded-full shadow-2xl w-2/3 sm:w-3/4 md:w-full mx-auto ring-4 ring-offset-8 ring-offset-gray-900 ring-cyan-500"
-            />
-            {/* --- RESUME BUTTON --- */}
-            <motion.a
-              href={resumePDF} 
-              download="Binit_Patra_Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 cursor-pointer"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <FaDownload />
-              See My Resume
-            </motion.a>
-          </motion.div>
+            {/* Resume Button */}
+            <div className="flex justify-center pt-4">
+              <a
+                href={resumePDF}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              >
+                <FileText className="h-5 w-5" />
+                View Resume
+              </a>
+            </div>
 
-          {/* Right Column: Text Content with a "Card" */}
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            // CHANGED: Card padding is now responsive
-            className="w-full md:w-2/3 text-left bg-gray-800/30 p-6 sm:p-8 rounded-lg shadow-lg"
-          >
-            {/* CHANGED: Smoother font scaling for the card title */}
-            <motion.h3 variants={itemVariants} className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-              Student & Aspiring <br/>
-              <span className="text-cyan-400">MERN Stack Developer</span>
-            </motion.h3>
-
-            <motion.p variants={itemVariants} className="text-base md:text-lg leading-relaxed text-gray-300 mb-6">
-              I'm a B.Tech Final Year student in Computer Science and Engineering at Arka Jain University with a deep passion for full-stack web development and AI/ML. I thrive on building platforms that solve real-world problems and creating impactful tech solutions.
-            </motion.p>
-            
-            <motion.p variants={itemVariants} className="text-base md:text-lg leading-relaxed text-gray-300 mb-8">
-              Currently, I'm deepening my expertise in Data Structures and Algorithms, contributing to open-source, and developing exciting projects like a HealthCure and Course Hub.
-            </motion.p>
-            
-            <motion.div variants={itemVariants}>
-              {/* --- Tech Stack Section --- */}
-              <h4 className="text-xl font-semibold text-white mb-4">
-                Tech Stack
-              </h4>
-              <div className="flex flex-wrap gap-3">
-                {techStack.map((skill) => (
-                  <span key={skill} className="bg-gray-900 text-cyan-300 text-sm font-medium px-4 py-2 rounded-full transition-transform hover:scale-105 cursor-pointer">
-                    {skill}
-                  </span>
-                ))}
+            {/* Tech Stack & Tools */}
+            <div className="grid md:grid-cols-2 gap-8 pt-8">
+              {/* Tech Stack Card */}
+              <div className="bg-gray-900/70 border border-cyan-600/30 rounded-xl p-6 shadow-md hover:shadow-cyan-500/20 transition-all duration-300">
+                <h3 className="text-2xl font-semibold mb-4 text-cyan-400 text-center">
+                  Tech Stack
+                </h3>
+                <div className="flex flex-wrap justify-center gap-3">
+                  {techStack.map((tech) => (
+                    <span
+                      key={tech}
+                      className="bg-gray-800 text-cyan-300 text-sm font-medium px-4 py-2 rounded-full transition-transform hover:scale-105 cursor-pointer border border-cyan-600/20"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
 
-              {/* --- Tools Section --- */}
-              <h4 className="text-xl font-semibold text-white mt-8 mb-4">
-                Tools Used
-              </h4>
-              <div className="flex flex-wrap gap-3">
-                {tools.map((tool) => (
-                  <span key={tool} className="bg-gray-900 text-cyan-300 text-sm font-medium px-4 py-2 rounded-full transition-transform hover:scale-105 cursor-pointer">
-                    {tool}
-                  </span>
-                ))}
+              {/* Tools Card */}
+              <div className="bg-gray-900/70 border border-cyan-600/30 rounded-xl p-6 shadow-md hover:shadow-cyan-500/20 transition-all duration-300">
+                <h3 className="text-2xl font-semibold mb-4 text-cyan-400 text-center">
+                  Tools Used
+                </h3>
+                <div className="flex flex-wrap justify-center gap-3">
+                  {tools.map((tool) => (
+                    <span
+                      key={tool}
+                      className="bg-gray-800 text-cyan-300 text-sm font-medium px-4 py-2 rounded-full transition-transform hover:scale-105 cursor-pointer border border-cyan-600/20"
+                    >
+                      {tool}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </motion.div>
-
-          </motion.div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
